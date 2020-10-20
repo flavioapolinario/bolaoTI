@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BolaoTI.Dominio</RootNamespace>
+    <AssemblyName>BolaoTI.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aposta.cs" />
+    <Compile Include="Campeonato.cs" />
+    <Compile Include="Enums\RegraPontuacaoEnum.cs" />
+    <Compile Include="Enums\TimeVencedorEnum.cs" />
+    <Compile Include="Estadio.cs" />
+    <Compile Include="Exceptions\BolaoTIException.cs" />
+    <Compile Include="Fase.cs" />
+    <Compile Include="Grupo.cs" />
+    <Compile Include="Interfaces\Aplicacao\ICampeonatoServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IEstadioServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IFaseServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IGrupoServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IOrganizacaoServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IPartidaServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IRodadaServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\ITimeServicoCadastro.cs" />
+    <Compile Include="Interfaces\Aplicacao\IUsuarioServicoCadastro.cs" />
+    <Compile Include="Interfaces\Repositorios\IApostaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\ICampeonatoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IEstadioRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IFaseRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IGrupoRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IPartidaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IPerfilRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IRankingRepositorio.cs" />
+    <Compile Include="Interfaces\Infraestrutura\IRepositorioGenerico.cs" />
+    <Compile Include="Interfaces\Repositorios\IRodadaRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\ITimeRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IUsuarioRepositorio.cs" />
+    <Compile Include="Interfaces\Repositorios\IOrganizacaoRepositorio.cs" />
+    <Compile Include="Organizacao.cs" />
+    <Compile Include="Partida.cs" />
+    <Compile Include="Perfil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ranking.cs" />
+    <Compile Include="Rodada.cs" />
+    <Compile Include="Seguranca\Claim.cs" />
+    <Compile Include="Seguranca\ExternalLogin.cs" />
+    <Compile Include="Servicos\CampeonatoServicoCadastro.cs" />
+    <Compile Include="Servicos\EstadioServicoCadastro.cs" />
+    <Compile Include="Servicos\FaseServicoCadastro.cs" />
+    <Compile Include="Servicos\GrupoServicoCadastro.cs" />
+    <Compile Include="Servicos\OrganizacaoServicoCadastro.cs" />
+    <Compile Include="Servicos\PartidaServicoCadastro.cs" />
+    <Compile Include="Servicos\RodadaServicoCadastro.cs" />
+    <Compile Include="Servicos\TimeServicoCadastro.cs" />
+    <Compile Include="Servicos\UsuarioServicoCadastro.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BolaoTI.Resources\BolaoTI.Resources.csproj">
+      <Project>{41e780e6-083b-4bf6-8869-4ce207f98ee5}</Project>
+      <Name>BolaoTI.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolaoTI.Utils\BolaoTI.Utils.csproj">
+      <Project>{3f8b262a-582c-4db1-8985-c0c140d435e7}</Project>
+      <Name>BolaoTI.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿@model BolaoTI.web.Models.Partida
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Partida</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataPartida)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataPartida)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GolsTimeHome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GolsTimeHome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GolsTimeAway)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GolsTimeAway)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

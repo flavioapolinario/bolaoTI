@@ -1,0 +1,18 @@
+﻿@model IEnumerable<BolaoTI.web.Models.Grupo>
+@{
+    ViewBag.Title = "Partidas";
+}
+
+<h2>Partidas</h2>
+@using (Html.BeginForm())
+{    
+    <p>
+        Selecione a fase da Copa: @Html.DropDownList("SelectedFase")
+        <input type="submit" value="Filtrar" />
+    </p>
+}
+@foreach (var grupo in Model)
+{
+    @Html.Partial("_FormAposta", grupo)    
+}
+

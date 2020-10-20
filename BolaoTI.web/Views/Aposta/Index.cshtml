@@ -1,0 +1,111 @@
+﻿@model IList<BolaoTI.web.ViewModels.ApostaPartidaData>
+
+@{
+    ViewBag.Title = "Partidas";
+    string nomeGrupo = string.Empty;
+}
+<p class="message-success">@ViewBag.StatusMessage</p>
+
+<h2>Apostas</h2>
+
+@using (Html.BeginForm("Index", "Aposta", new { Message = string.Empty }, FormMethod.Get))
+{        
+    @Html.AntiForgeryToken()
+    @:Selecione a fase da Copa: @Html.DropDownList("SelectedFase")
+    <input type="submit" value="Filtrar" />    
+}
+
+
+@using (Html.BeginForm("SalvarAposta", "Aposta", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true);
+            
+    @:Número de Partidas: <b>@ViewBag.NumeroPartidas</b><br />
+    @:Palpites realizados:<b> @ViewBag.PalpitesRealizados</b><br />
+
+    if (!ViewBag.EstaAberta)
+    {        
+        <h4>Apostas encerradas na data: @ViewBag.DataEncerramento</h4>
+    }
+    else
+    {
+        <input type="submit" value="Salvar" />
+        <h4 style="color: red">As apostas encerrarão: @ViewBag.DataEncerramento</h4>
+    }
+
+    for (var i = 0; i < Model.Count(); i++)
+    {
+        var partida = Model.ElementAt<BolaoTI.web.ViewModels.ApostaPartidaData>(i);
+
+        // Dados a serem enviados
+        @Html.HiddenFor(x => x[i].IdUsuario);
+        @Html.HiddenFor(x => x[i].IdPartida);
+        @Html.HiddenFor(x => x[i].IdAposta);
+
+        if (!nomeGrupo.Equals(partida.NomeGrupo))
+        {
+            <h4>@partida.NomeGrupo</h4>
+            nomeGrupo = partida.NomeGrupo;
+            <hr />
+        }
+                
+        <table>
+            <tr>
+                <td style="width: 15%">
+                    <b>@partida.NomeTimeHome</b>
+                </td>
+                <td style="width: 5%">
+                    <img src="@partida.ImageTimeHome.Remove(0, 1)" />
+                </td>
+                <td style="width: 5%">
+                    @if (ViewBag.EstaAberta && !partida.PartidaEncerrada)
+                    {
+                        @Html.TextBoxFor(x => x[i].GolsApostadoTimeHome, new { maxlength = 2, @class = "inputTextBox" })
+                        @Html.ValidationMessageFor(x => x[i].GolsApostadoTimeHome)
+                    }
+                    else
+                    {
+                        <b>@Html.DisplayFor(x => x[i].GolsApostadoTimeHome)</b>
+                        @Html.ValidationMessageFor(x => x[i].GolsApostadoTimeHome)
+                    }
+                </td>
+                <td style="width: 3%;">
+                    <b>x</b>
+                </td>
+                <td style="width: 5%">
+                    @if (ViewBag.EstaAberta && !partida.PartidaEncerrada)
+                    {
+                        @Html.TextBoxFor(x => x[i].GolsApostadoTimeAway, new { maxlength = 2, @class = "inputTextBox" })
+                        @Html.ValidationMessageFor(x => x[i].GolsApostadoTimeAway)
+                    }
+                    else
+                    {
+                        <b>@Html.DisplayFor(x => x[i].GolsApostadoTimeAway)</b>
+                        @Html.ValidationMessageFor(x => x[i].GolsApostadoTimeAway)
+                    }
+                </td>
+                <td style="width: 5%">
+                    <img src="@partida.ImageTimeAway.Remove(0, 1)" />
+                </td>
+                <td style="width: 15%">
+                    <b>@partida.NomeTimeAway</b>
+                </td>
+                <td style="width: 15%">
+                    <b>@partida.DataPartida.ToString("dd/MM/yyyy HH:mm")</b>
+                </td>
+                <td>
+                    <b>@partida.NomeEstadio</b>
+                </td>
+            </tr>
+        </table>
+        
+        if (!nomeGrupo.Equals(partida.NomeGrupo))
+        {
+            nomeGrupo = partida.NomeGrupo;
+            <hr />
+        }
+    }
+}
+
+

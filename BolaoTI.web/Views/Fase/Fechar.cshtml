@@ -1,0 +1,39 @@
+﻿@model BolaoTI.web.Models.Fase
+
+@{
+    ViewBag.Title = "Fechar Fase";
+}
+
+<h2>Fechar a Fase: @Model.Nome</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Fase</legend>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Nome)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Nome)
+        </div>
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Nome)
+        </div>
+        <div class="display-field">
+            @Html.EditorFor(model => model.DataEncerramento)
+            @Html.ValidationMessageFor(model => model.DataEncerramento)
+        </div>
+
+    </fieldset>
+}
+<p>
+    @Html.ActionLink("Voltar", "Index")
+</p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

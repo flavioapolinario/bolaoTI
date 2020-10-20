@@ -1,0 +1,130 @@
+﻿@model BolaoTI.UI.ViewsModel.FaseViewModel
+
+@{
+    ViewBag.Title = Model.Campeonato.Nome;
+}
+<h2>@ViewBag.Title </h2>
+
+@if ((bool)ViewBag.isParticipante)
+{
+    @Html.Partial("_Fase", Model, new ViewDataDictionary { { "Controller", "Aposta" } })
+
+    @Html.Partial("_Mensagem", null, new ViewDataDictionary { { "Mensagem", TempData["mensagem"] }, { "Tipo", TempData["tipo"] } })
+
+    if (Model.Fase != null)
+    {
+        <div id="main-random-painel">
+            <br />
+            <a href="#" id="toogleRandom">Sugestão +</a>
+            <br /><br />
+            <div class="Randomizar" id="random-painel" style="display: none">
+                <div class="row1">
+                    <div class="panel panel-primary" style="max-width: 550px;">
+                        <div class="panel-heading">
+                            Selecione abaixo os valores mínimo e máximo para as partidas e o sistema irá definir sua sorte!
+                        </div>
+                        <div class="panel-body text-center" >
+                            <div class="col-xs-3 col-md-3">
+                                <input type="text" class="form-control" id="limiteInferiorRandom" placeholder="Minimo" />
+                            </div>
+                            <div class="col-xs-3 col-md-3">
+                                <input type="text" class="form-control" id="limiteSuperiorRandom" placeholder="Máximo" />
+                            </div>
+                            <div class="col-xs-3">
+                                <button class="btn btn-success" onclick="return false;" id="btnRandom">Aplicar valores</button>
+                            </div>
+                        </div>
+                        <div class="row text-center" id="randomAlertDiv" style="display: none; padding-left: 20px;">
+                            <div class="col-md-6">
+                                <div class="alert alert-danger" role="alert" id="randomAlertText">Campo indefinido...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @Html.Partial("_ApostaFase", Model.Fase, new ViewDataDictionary { { "RealizouAposta", ViewBag.Apostada } })
+    }
+}
+else
+{
+    <p class="alert alert-danger">
+        Usuario: <b>@User.Identity.Name</b> não é um participante do bolão. Solicite o seu acesso clicando <a href="mailto:flavioapolinario@hotmail.com?Subject=Solicitação%20Acesso%20'@ViewBag.UserEmail'" target="_top">aqui</a>
+    </p>
+}
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery-1.10.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($('#btnApostar').length > 0)
+                $('#main-random-painel').show();
+            else
+                $('#main-random-painel').hide();
+        });
+
+        $('#btnRandom').bind('click',
+            function () {
+                var valorInferior = $('#limiteInferiorRandom').val();
+                var valorSuperior = $('#limiteSuperiorRandom').val();
+
+                function getRandomInt(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min)) +
+                        min; //The maximum is exclusive and the minimum is inclusive
+                }
+
+                function validaCampos() {
+                    if (valorInferior === "") {
+                        $('#randomAlertDiv').show();
+                        $('#randomAlertText').text('Defina o limite inferior.');
+                        return false;
+                    }
+                    if ((valorInferior < 0) || (valorInferior >= 30)) {
+                        $('#randomAlertDiv').show();
+                        $('#randomAlertText').text('Limite inferior deve ser maior que 0.');
+                        return false;
+                    }
+                    if (valorSuperior === "") {
+                        $('#randomAlertDiv').show();
+                        $('#randomAlertText').text('Defina o limite superior.');
+                        return false;
+                    }
+                    if ((valorSuperior < 0) || (valorSuperior >= 30)) {
+                        $('#randomAlertText').text('Limite superior deve ser maior que 0.');
+                        $('#randomAlertDiv').show();
+                        return false;
+                    }
+                    if (valorInferior > valorSuperior) {
+                        $('#randomAlertText').text('Limite inferior deve ser maior ou igual ao Limite superior.');
+                        $('#randomAlertDiv').show();
+                        return false;
+                    }
+
+                    $('#randomAlertText').text('');
+                    $('#randomAlertDiv').hide();
+                    return true;
+                }
+
+                if (validaCampos()) {
+                    $('.team_home').each(function () {
+                        $(this).val(getRandomInt(valorInferior, valorSuperior));
+                    });
+
+                    $('.team_alway').each(function () {
+                        $(this).val(getRandomInt(valorInferior, valorSuperior));
+                    });
+                }
+            });
+
+        $('#toogleRandom').bind('click',
+            function () {
+                $('#random-painel').toggle();
+            });
+    </script>
+}

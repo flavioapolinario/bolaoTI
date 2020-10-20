@@ -1,0 +1,24 @@
+﻿@model BolaoTI.web.Models.Grupo
+
+<fieldset>
+    <legend>Grupo</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Nome)
+        @Html.ValidationMessageFor(model => model.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Fase)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("FaseID", null, new { @class = "dropDownList" })
+        @Html.ValidationMessageFor(model => model.Fase.Id)
+    </div>
+
+    <p>
+        <input type="submit" value="Salvar" />
+    </p>
+</fieldset>

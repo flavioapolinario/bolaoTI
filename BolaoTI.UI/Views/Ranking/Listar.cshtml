@@ -1,0 +1,26 @@
+﻿@using BolaoTI.Dominio
+@{
+    var Rankings = (List<Ranking>)ViewBag.Rankings;
+}
+<p>
+    <h2>@ViewBag.CampeonatoNome</h2>
+</p>
+@if ((bool)ViewBag.isParticipante)
+{ 
+    <p>
+        <h3>@BolaoTI.Resources.View.Label.Label_Ranking</h3>
+    </p>
+    <div class="row">
+        <div class="col-lg-12" id="lista-Rankings">
+            @Html.Partial("_ListaDeRankings", Rankings)
+        </div>
+    </div>
+    <p><a class="btn btn-default" onclick="window.location='@Request.UrlReferrer.AbsoluteUri'" href="#">@BolaoTI.Resources.View.Link.Action_Voltar_Link</a></p>
+}
+else
+{
+    <p class="alert alert-danger">
+        Usuario: <b>@User.Identity.Name</b> não é um participante do bolão. Solicite o seu acesso clicando <a href="mailto:flavioapolinario@hotmail.com?Subject=Solicitação%20Acesso%20'@ViewBag.UserEmail'" target="_top">aqui</a>
+    </p>
+}
+

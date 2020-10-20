@@ -1,0 +1,14 @@
+﻿@model BolaoTI.Dominio.Fase
+
+@using (Html.BeginForm("Apostar", "Aposta", FormMethod.Post, new { id = "formApostar" }))
+{
+    @Html.AntiForgeryToken()   
+                  
+    @Html.Partial("_Partida", Model, new ViewDataDictionary { { "RealizouAposta", ViewData["RealizouAposta"] }, { "Funcao", BolaoTI.Resources.View.Link.Action_Apostar_link }, { "Obrigatorio", true } })
+    
+    if (!bool.Parse(ViewData["RealizouAposta"].ToString()))
+    {
+        <button type="submit" id="btnApostar" class="btn btn-lg btn-primary">@BolaoTI.Resources.View.Link.Action_Apostar_link </button>
+    }  
+}
+

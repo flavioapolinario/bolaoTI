@@ -1,0 +1,68 @@
+﻿@using BolaoTI.Dominio;
+@model List<Ranking>
+@{
+    var grid = new WebGrid(Model);    
+}
+
+@helper displayPosicao(Ranking ranking)
+{
+    <b>
+        <h3>
+            @Html.DisplayFor(model => ranking.Colocacao)
+        </h3>
+    </b>
+}
+
+@helper displayNome(Ranking ranking)
+{
+    <b>
+        @Html.DisplayFor(model => ranking.Usuario.Nome)
+    </b><br/>            
+    @Html.DisplayFor(model => ranking.Usuario.Email)
+
+}
+
+@helper displayTotalPontos(Ranking ranking, BolaoTI.Dominio.Enums.RegraPontuacaoEnum regra)
+{    
+    switch (regra)
+    {
+        case BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarPlacarExato:
+            <h3>
+                @Html.DisplayFor(model => ranking.DezTotalPontos)
+            </h3>   
+            break;
+        case BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarPlacarParcial:
+            <h3>
+                @Html.DisplayFor(model => ranking.SeteTotalPontos)
+            </h3>   
+            break;
+        case BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarResultado:
+            <h3>
+                @Html.DisplayFor(model => ranking.CincoTotalPontos)
+            </h3>   
+            break;
+        case BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarResultadoParcial:
+            <h3>
+                @Html.DisplayFor(model => ranking.DoisTotalPontos)
+            </h3>   
+            break;
+        case BolaoTI.Dominio.Enums.RegraPontuacaoEnum.ErrouResultado:
+            <h3>
+                @Html.Label(ranking.TotalPontos.ToString())
+                @Html.Label(".pts")
+            </h3>   
+            break;
+        default:
+            break;
+    }           
+}
+
+@grid.GetHtml(tableStyle: "table table-striped table-hover", columns: new[]{
+    grid.Column("Posição", format: d=> displayPosicao((Ranking)d.Value), canSort: false, style: "colunaPosicao"),
+    grid.Column(BolaoTI.Resources.Field.Ranking_Usuario_Nome_Field, format: d=> displayNome((Ranking)d.Value), canSort: false, style: "colunaParticipante"),    
+    grid.Column("Total", format: d=> displayTotalPontos((Ranking)d.Value, BolaoTI.Dominio.Enums.RegraPontuacaoEnum.ErrouResultado), canSort: false),    
+    grid.Column("10 pt", format: d=> displayTotalPontos((Ranking)d.Value, BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarPlacarExato), canSort: false),    
+    grid.Column("7 pt", format: d=> displayTotalPontos((Ranking)d.Value, BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarPlacarParcial), canSort: false),    
+    grid.Column("5 pt", format: d=> displayTotalPontos((Ranking)d.Value, BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarResultado), canSort: false),    
+    grid.Column("2 pt", format: d=> displayTotalPontos((Ranking)d.Value, BolaoTI.Dominio.Enums.RegraPontuacaoEnum.AcertarResultadoParcial), canSort: false),    
+})

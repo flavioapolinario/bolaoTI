@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BolaoTI.web.Models.Grupo>
+
+@{
+    ViewBag.Title = "Grupos";
+}
+
+<h2>Grupos</h2>
+
+<p>
+    @Html.ActionLink("Registrar Novo Grupo", "Create")
+</p>
+
+@using (Html.BeginForm())
+{        
+    @Html.AntiForgeryToken()
+    @:Selecione a fase da Copa: @Html.DropDownList("SelectedFase")
+    <input type="submit" value="Filtrar" />
+}
+
+<table>
+    <tr>
+        <th style="width: 30%">
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th style="width: 40%">
+            @Html.DisplayNameFor(model => model.Fase)
+        </th>
+        <th style="width: 30%"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fase.Nome) - 
+                @Html.DisplayFor(modelItem => item.Fase.DataEncerramento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,25 @@
+﻿@using BolaoTI.Dominio;
+@model List<Time>
+@{
+    var grid = new WebGrid(Model, rowsPerPage: 20);
+    var quantidade = Model.Count();
+}
+
+@helper displayNome(Time time)
+{
+    var imagePath = time.ImagemBandeira.Trim().Remove(0, 1);    
+    <img src="@imagePath" /> <b>@Html.DisplayFor(model => time.NomeAbreviado)</b> @Html.DisplayFor(model => time.Nome)        
+}
+
+@helper displayCapacidade(Time time)
+{
+    
+}
+
+@grid.GetHtml(tableStyle: "table table-striped table-hover", columns: new[]{
+    grid.Column(BolaoTI.Resources.Field.Time_Nome_Field, format: d=> displayNome((Time)d.Value)),        
+    grid.Column(format: d => Html.ActionLink(BolaoTI.Resources.View.Link.Action_Remover_Link, "Deletar", new { id = d.Id },
+            new { @class = "btn btn-danger remover" }))
+})
+
+<p><strong>@BolaoTI.Resources.View.Label.Label_Quantidade: </strong>@quantidade</p>

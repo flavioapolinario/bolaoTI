@@ -1,0 +1,50 @@
+﻿@model BolaoTI.web.Models.Partida
+
+@{    
+    List<BolaoTI.web.Models.Aposta> apostas = ViewBag.Apostas;
+}
+
+<tr>
+    <td style="width: 15%">
+        <b>@Model.TimeHome.Nome</b>
+    </td>
+    <td style="width: 5%">
+        <img src="@Model.TimeHome.ImagemBandeira.Remove(0, 1)" />
+    </td>
+    <td style="width: 5%">
+        @*@Html.TextBoxFor(x => x[i].GolsApostadoTimeHome, new { onkeydown = "return ValidateNumber(event);", @class = "textboxClass", required = "required" })
+                    @Html.ValidationMessageFor(x => x[i].GolsApostadoTimeHome)*@
+        <input type="text" name="GolsTimeHome" style="width:100%" value="                        
+                            @if (apostas != null && apostas.Count() > 0)
+                            {
+                                var aposta = apostas.Find(a => a.PartidaApostada.Id == Model.Id);
+                                Html.Raw(aposta != null ? aposta.GolsTimeHome.ToString() : string.Empty);
+                            }"/>
+    </td>
+    <td style="width: 3%;">
+        <b>x</b>
+    </td>
+    <td style="width: 5%">
+        @*  @Html.TextBoxFor(x => x[i].GolsApostadoTimeAway, new { onkeydown = "return ValidateNumber(event);", @class = "textboxClass", required = "required" })
+                    @Html.ValidationMessageFor(x => x[i].GolsApostadoTimeAway)*@
+        <input type="text" name="GolsTimeAway" style="width:100%" value="
+                    
+                            @if (apostas != null && apostas.Count() > 0)
+                            {
+                                var aposta = apostas.Find(a => a.PartidaApostada.Id == Model.Id);
+                                Html.Raw(aposta != null ? aposta.GolsTimeAway.ToString() : string.Empty);
+                            }"/>
+    </td>
+    <td style="width: 5%">
+        <img src="@Model.TimeAway.ImagemBandeira.Remove(0, 1)" />
+    </td>
+    <td style="width: 15%">
+        <b>@Model.TimeAway.Nome</b>
+    </td>
+    <td style="width: 15%">
+        <b>@Model.DataPartida.ToString("dd/MM/yyyy HH:mm")</b>
+    </td>
+    <td>
+        <b>@Model.EstadioJogo.Nome</b>
+    </td>
+</tr>

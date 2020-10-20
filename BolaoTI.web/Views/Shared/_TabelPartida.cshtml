@@ -1,0 +1,37 @@
+﻿@model BolaoTI.web.ViewModels.ApostaPartidaData
+
+<table>
+    <tr>
+        <td style="width: 15%">
+            <b>@Model.NomeTimeHome</b>
+        </td>
+        <td style="width: 5%">
+            <img src="@Model.ImageTimeHome.Remove(0, 1)" />
+        </td>
+        <td style="width: 5%">
+
+            <b>@Html.DisplayFor(x => x.GolsApostadoTimeHome)</b>
+            @Html.ValidationMessageFor(x => x.GolsApostadoTimeHome)
+
+        </td>
+        <td style="width: 3%;">
+            <b>x</b>
+        </td>
+        <td style="width: 5%">
+            <b>@Html.DisplayFor(x => x.GolsApostadoTimeAway)</b>
+            @Html.ValidationMessageFor(x => x.GolsApostadoTimeAway)
+        </td>
+        <td style="width: 5%">
+            <img src="@Model.ImageTimeAway.Remove(0, 1)" />
+        </td>
+        <td style="width: 15%">
+            <b>@Model.NomeTimeAway</b>
+        </td>
+        <td style="width: 15%">
+            <b>@Model.DataPartida.ToString("dd/MM/yyyy HH:mm")</b>
+        </td>
+        <td>
+            <b>@Model.NomeEstadio</b>
+        </td>
+    </tr>
+</table>

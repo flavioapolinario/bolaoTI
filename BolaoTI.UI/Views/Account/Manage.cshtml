@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = BolaoTI.Resources.View.Link.Action_Editar_Link;
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@if (!String.IsNullOrEmpty(ViewBag.StatusMessage))
+{
+<p class="alert alert-success">
+    @ViewBag.StatusMessage
+</p>
+}
+<div class="row">
+    <div class="col-md-12">
+        @if (ViewBag.HasLocalPassword)
+        {
+            @Html.Partial("_ChangePasswordPartial")
+        }
+        else
+        {
+            @Html.Partial("_SetPasswordPartial")
+        }       
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

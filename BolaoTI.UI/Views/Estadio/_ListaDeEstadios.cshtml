@@ -1,0 +1,26 @@
+﻿@using BolaoTI.Dominio;
+@model List<Estadio>
+@{
+    var grid = new WebGrid(Model);
+    var quantidade = Model.Count();
+}
+
+@helper displayNome(Estadio estadio)
+{
+    <b>@Html.DisplayFor(model => estadio.Nome)</b><br/>            
+    @Html.DisplayFor(model => estadio.Localizacao)
+}
+
+@helper displayCapacidade(Estadio estadio)
+{
+    @Html.DisplayFor(model => estadio.Capacidade)
+}
+
+@grid.GetHtml(tableStyle: "table table-striped table-hover", columns: new[]{
+    grid.Column(BolaoTI.Resources.Field.Estadio_Nome_Field, format: d=> displayNome((Estadio)d.Value)),    
+    grid.Column(BolaoTI.Resources.Field.Estadio_Capacidade_Field, format: d=> displayCapacidade((Estadio)d.Value)),    
+    grid.Column(format: d => Html.ActionLink(BolaoTI.Resources.View.Link.Action_Remover_Link, "Deletar", new { id = d.Id },
+            new { @class = "btn btn-danger remover" }))
+})
+
+<p><strong>@BolaoTI.Resources.View.Label.Label_Quantidade: </strong>@quantidade</p>

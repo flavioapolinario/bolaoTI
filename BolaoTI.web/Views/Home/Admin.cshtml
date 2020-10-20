@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <ul>
+        <p>
+            <li>@Html.ActionLink("Registrar novo usuario", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Participantes", "ExibirParticipantes", "Home")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Fases da Copa", "Index", "Fase")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Grupos da Copa", "Index", "Grupo")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Rodadas", "Index", "Rodada")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Partidas", "Index", "Partida")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Times", "Index", "Time")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Administrar Estadios", "Index", "Estadio")</li>
+        </p>
+        <p>
+            <li>@Html.ActionLink("Fechar Partidas", "Fechar", "Partida")</li>
+        </p>
+    </ul>
+</article>
+
+@*<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>*@

@@ -1,0 +1,69 @@
+﻿@model List<BolaoTI.web.Models.Partida>
+@{
+    ViewBag.Title = "Fechar";
+}
+
+<h2>Partidas</h2>
+
+<p class="message-success">@ViewBag.StatusMessage</p>
+
+
+@using (Html.BeginForm())
+{        
+    @Html.AntiForgeryToken()
+    @:Selecione a fase da Copa: @Html.DropDownList("SelectedFase")
+    <input type="submit" value="Filtrar" />
+}
+
+@using (Html.BeginForm("FecharPartida", "Partida", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <input type="submit" value="Fechar" />
+    
+    <table>
+        @for (var i = 0; i < Model.Count(); i++)
+        {
+            @Html.HiddenFor(x => x[i].Id)
+            @Html.HiddenFor(x => x[i].DataPartida)
+            @Html.HiddenFor(x => x[i].TimeHomeID)
+            @Html.HiddenFor(x => x[i].TimeAwayID)
+            @Html.HiddenFor(x => x[i].EstadioID)
+            @Html.HiddenFor(x => x[i].RodadaID)
+    
+            <tr>
+                <td style="width: 15%">
+                    <b>@Model.ElementAt(i).TimeHome.Nome</b>
+                </td>
+                <td style="width: 5%">
+                    <img src="@Model.ElementAt(i).TimeHome.ImagemBandeira.Remove(0, 1)" />
+                </td>
+                <td style="width: 5%">
+                    @Html.TextBoxFor(x => x[i].GolsTimeHome, new { maxlength = 2, @class = "inputTextBox" })
+                    @Html.ValidationMessageFor(x => x[i].GolsTimeHome)
+                </td>
+                <td style="width: 3%;">
+                    <b>x</b>
+                </td>
+                <td style="width: 5%">
+                    @Html.TextBoxFor(x => x[i].GolsTimeAway, new { maxlength = 2, @class = "inputTextBox" })
+                    @Html.ValidationMessageFor(x => x[i].GolsTimeAway)
+                </td>
+                <td style="width: 5%">
+                    <img src="@Model.ElementAt(i).TimeAway.ImagemBandeira.Remove(0, 1)" />
+                </td>
+                <td style="width: 15%">
+                    <b>@Model.ElementAt(i).TimeAway.Nome</b>
+                </td>
+                <td style="width: 15%">
+                    <b>@Model.ElementAt(i).DataPartida.ToString("dd/MM/yyyy HH:mm")</b>
+                </td>
+                <td>
+                    <b>@Model.ElementAt(i).EstadioJogo.Nome</b>
+                </td>
+            </tr>
+        }
+    </table>
+    
+    <input type="submit" value="Fechar" />
+}

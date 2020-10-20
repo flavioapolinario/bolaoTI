@@ -1,0 +1,29 @@
+﻿@model BolaoTI.web.Models.Grupo
+
+@{
+    ViewBag.Title = Model.Nome;
+    List<BolaoTI.web.Models.Aposta> apostas = ViewBag.Apostas;
+}
+
+<h4>@Model.Nome</h4>
+<hr />
+@using (Html.BeginForm("SalvarApostaPorGrupo", "Aposta", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.ValidationSummary(true);
+    
+    @Html.HiddenFor(p => p.Id)
+    @Html.HiddenFor(p => p.Nome)
+    @Html.HiddenFor(p => p.Fase.Id)
+    @Html.HiddenFor(p => p.Fase.Nome)
+                                 foreach (var rodada in Model.Rodadas)
+                                 {                                    
+    @Html.Partial("_FormRodada", rodada)         
+                                 }       
+
+    <p>
+        <input type="submit" value="Salvar" />
+    </p>
+}
+
+

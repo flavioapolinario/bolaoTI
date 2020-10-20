@@ -1,0 +1,36 @@
+﻿@model BolaoTI.web.Models.Time
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Time</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NomeAbreviado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeAbreviado)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ImagemBandeira)
+    </div>
+    <div class="display-field">
+        <img src="@Model.ImagemBandeira.ToString().Remove(0, 1)" />
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

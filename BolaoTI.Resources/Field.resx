@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_LocalPasswordModel_ConfrimPassword_Field" xml:space="preserve">
+    <value>Confirme a nova senha</value>
+  </data>
+  <data name="Account_LocalPasswordModel_ExhibitionName_Field" xml:space="preserve">
+    <value>Alterar o nome para exibição</value>
+  </data>
+  <data name="Account_LocalPasswordModel_NewPassword_Field" xml:space="preserve">
+    <value>Nova senha</value>
+  </data>
+  <data name="Account_LocalPasswordModel_OldPassword_Field" xml:space="preserve">
+    <value>Senha atual</value>
+  </data>
+  <data name="Account_LoginModel_ExhibitionName_Field" xml:space="preserve">
+    <value>Nome para exibição</value>
+  </data>
+  <data name="Account_LoginModel_Password_Field" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Account_LoginModel_RememberMe_Field" xml:space="preserve">
+    <value>Esqueceu sua senha?</value>
+  </data>
+  <data name="Account_LoginModel_UserName_Field" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Account_RegisterExternalLoginModel_UserName_Field" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Account_RegisterModel_ConfirmPassword_Field" xml:space="preserve">
+    <value>Confirme a senha</value>
+  </data>
+  <data name="Account_RegisterModel_ExhibitionName_Field" xml:space="preserve">
+    <value>Nome para exibição</value>
+  </data>
+  <data name="Account_RegisterModel_Password_Field" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Account_RegisterModel_UserName_Field" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Aposta_GolsTimeAway_Field" xml:space="preserve">
+    <value>Gols do time visitante</value>
+  </data>
+  <data name="Aposta_GolsTimeHome_Field" xml:space="preserve">
+    <value>Gols do time da casa</value>
+  </data>
+  <data name="Aposta_PartidaAposta_Field" xml:space="preserve">
+    <value>Aposta da Partida</value>
+  </data>
+  <data name="Aposta_PontosAposta_Field" xml:space="preserve">
+    <value>Pontos somados da aposta</value>
+  </data>
+  <data name="Aposta_Usuario_Field" xml:space="preserve">
+    <value>Apostador</value>
+  </data>
+  <data name="Campeonato_Fases_Field" xml:space="preserve">
+    <value>Fases</value>
+  </data>
+  <data name="Campeonato_Fim_Field" xml:space="preserve">
+    <value>Fim</value>
+  </data>
+  <data name="Campeonato_Inicio_Field" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Campeonato_NomeAbreviado_Field" xml:space="preserve">
+    <value>Nome Abreviado</value>
+  </data>
+  <data name="Campeonato_Nome_Field" xml:space="preserve">
+    <value>Nome Campeonato</value>
+  </data>
+  <data name="Campeonato_TemporadaAno_Field" xml:space="preserve">
+    <value>Temporada: {0}</value>
+  </data>
+  <data name="Campeonato_Temporada_Field" xml:space="preserve">
+    <value>Temporada: {0} / {1}</value>
+  </data>
+  <data name="Claim_ClaimId_Field" xml:space="preserve">
+    <value>ClaimId</value>
+  </data>
+  <data name="Claim_ClaimType_Field" xml:space="preserve">
+    <value>ClaimType</value>
+  </data>
+  <data name="Claim_ClaimValue_Field" xml:space="preserve">
+    <value>ClaimValue</value>
+  </data>
+  <data name="Claim_UsuarioId_Field" xml:space="preserve">
+    <value>UsuarioId</value>
+  </data>
+  <data name="Estadio_Cidade_Field" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Estadio_Estado_Field" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Estadio_Nome_Field" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Estadio_Capacidade_Field" xml:space="preserve">
+    <value>Capacidade</value>
+  </data>
+  <data name="Estadio_Localizacao_Field" xml:space="preserve">
+    <value>Localização</value>
+  </data>
+  <data name="ExternalLogin_LoginProvider_Field" xml:space="preserve">
+    <value>LoginProvider</value>
+  </data>
+  <data name="ExternalLogin_ProviderKey_Field" xml:space="preserve">
+    <value>ProviderKey</value>
+  </data>
+  <data name="ExternalLogin_UserId_Field" xml:space="preserve">
+    <value>UserId</value>
+  </data>
+  <data name="Fase_Campeoanto_Field" xml:space="preserve">
+    <value>Campeonato</value>
+  </data>
+  <data name="Fase_DataEncerramento_Field" xml:space="preserve">
+    <value>Data de Encerramento</value>
+  </data>
+  <data name="Fase_Nome_Field" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Fase_Situacao_Field" xml:space="preserve">
+    <value>Situação</value>
+  </data>
+  <data name="Grupo_Fase_Field" xml:space="preserve">
+    <value>Fase do Grupo</value>
+  </data>
+  <data name="Grupo_Nome_Field" xml:space="preserve">
+    <value>Nome do Grupo</value>
+  </data>
+  <data name="Grupo_Rodadas_Field" xml:space="preserve">
+    <value>Rodadas do Grupo</value>
+  </data>
+  <data name="Organizacao_Campeonato_Field" xml:space="preserve">
+    <value>Campeonatos</value>
+  </data>
+  <data name="Organizacao_Nome_Field" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Organizacao_Usuario_Field" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="Partida_Apostas_Field" xml:space="preserve">
+    <value>Apostas da Partida</value>
+  </data>
+  <data name="Partida_DataPartida_Field" xml:space="preserve">
+    <value>Data da Partida</value>
+  </data>
+  <data name="Partida_Empate_Field" xml:space="preserve">
+    <value>Empate</value>
+  </data>
+  <data name="Partida_Estadio_Field" xml:space="preserve">
+    <value>Estadio</value>
+  </data>
+  <data name="Partida_GrupoRodada_Field" xml:space="preserve">
+    <value>Rodada - Grupo</value>
+  </data>
+  <data name="Partida_Rodada_Field" xml:space="preserve">
+    <value>Rodada</value>
+  </data>
+  <data name="Partida_TimeCasa_Gols_Field" xml:space="preserve">
+    <value>Gols Time Casa</value>
+  </data>
+  <data name="Partida_TimeCasa_Nome_Field" xml:space="preserve">
+    <value>Time Casa</value>
+  </data>
+  <data name="Partida_TimeVisitante_Gols_Field" xml:space="preserve">
+    <value>Gols Time Visitante</value>
+  </data>
+  <data name="Partida_TimeVisitante_Nome_Field" xml:space="preserve">
+    <value>Time Visitante</value>
+  </data>
+  <data name="Perfil_Id_Field" xml:space="preserve">
+    <value>PerfilId</value>
+  </data>
+  <data name="Perfil_Nome_Field" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Rodada_Grupo_Field" xml:space="preserve">
+    <value>Rodada do Grupo</value>
+  </data>
+  <data name="Rodada_Nome_Field" xml:space="preserve">
+    <value>Rodada</value>
+  </data>
+  <data name="Rodada_Partidas_Field" xml:space="preserve">
+    <value>Partidas</value>
+  </data>
+  <data name="Time_Bandeira_Field" xml:space="preserve">
+    <value>Bandeira</value>
+  </data>
+  <data name="Time_NomeAbreviado_Field" xml:space="preserve">
+    <value>Nome Abreviado</value>
+  </data>
+  <data name="Time_Nome_Field" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Usuario_Claims_Field" xml:space="preserve">
+    <value>Claims</value>
+  </data>
+  <data name="Usuario_Email_Field" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Usuario_Id_Field" xml:space="preserve">
+    <value>UsuarioId</value>
+  </data>
+  <data name="Usuario_NomeExibicao_Field" xml:space="preserve">
+    <value>Nome para exibição</value>
+  </data>
+  <data name="Usuario_Nome_Field" xml:space="preserve">
+    <value>Participante</value>
+  </data>
+  <data name="Usuario_Organizacoes_Field" xml:space="preserve">
+    <value>Organizacoes</value>
+  </data>
+  <data name="Usuario_PasswordHash_Field" xml:space="preserve">
+    <value>PasswordHash</value>
+  </data>
+  <data name="Usuario_Perfils_Field" xml:space="preserve">
+    <value>Perfis</value>
+  </data>
+  <data name="Usuario_Perfil_Field" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="Usuario_SecurityStamp_Field" xml:space="preserve">
+    <value>SecurityStamp</value>
+  </data>
+  <data name="Usuario_ExternalLogins_Field" xml:space="preserve">
+    <value>ExternalLogins</value>
+  </data>
+  <data name="Usuario_Telefone_Field" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="Usuario_ConfimPassword_Field" xml:space="preserve">
+    <value>Confirme a Senha</value>
+  </data>
+  <data name="Usuario_Password_Field" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Usuario_ConfimNewPassword_Field" xml:space="preserve">
+    <value>Confirme a Nova Senha</value>
+  </data>
+  <data name="Usuario_NewPassword_Field" xml:space="preserve">
+    <value>Nova Senha</value>
+  </data>
+  <data name="Usuario_OldPassword_Field" xml:space="preserve">
+    <value>Senha Antiga</value>
+  </data>
+  <data name="Campeonato_Organizacoes_Field" xml:space="preserve">
+    <value>Organizacoes</value>
+  </data>
+  <data name="Partida_TimeAway_Field" xml:space="preserve">
+    <value>TimeAway</value>
+  </data>
+  <data name="Partida_TimeHome_Field" xml:space="preserve">
+    <value>TimeHome</value>
+  </data>
+  <data name="Ranking_Colocacao_Field" xml:space="preserve">
+    <value>Colocação</value>
+  </data>
+  <data name="Ranking_TotalPontos_Field" xml:space="preserve">
+    <value>TotalPontos</value>
+  </data>
+  <data name="Ranking_Usuario_Nome_Field" xml:space="preserve">
+    <value>Participante</value>
+  </data>
+</root>

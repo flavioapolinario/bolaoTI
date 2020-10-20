@@ -1,0 +1,50 @@
+﻿@model BolaoTI.web.Models.Estadio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Estadio</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cidade)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Uf)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Uf)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Localizacao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Localizacao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Capacidade)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Capacidade)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

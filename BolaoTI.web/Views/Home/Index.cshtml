@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Bolão da TI";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                <mark>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</mark>
+            </p>
+        </div>
+    </section>
+}
+<h3>Para participar siga os seguintes passos:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Solicite o cadastro</h5>
+        Envie um email para os administradores do <a href="mailto:flavioapolinario@hotmail.com" title="Solicite seu cadastro">Bolão TI</a> e solicite seu cadastro.        
+    </li>
+
+    <li class="two">
+        <h5>Faça o login</h5>
+        Aposta a confirmação do seu registro faça login no site.        
+    </li>
+
+    <li class="three">
+        <h5>Dê seu palpite</h5>
+        Dê seu palpite nos jogos da Copa do Mundo FIFA 2014.
+        <a href="">Aprenda mais sobre as regras do bolão…</a>
+    </li>
+
+    <li class="four">
+        <h5>Confira o Ranking</h5>
+        Confira os melhores no ranking do Bolão da TI.        
+    </li>
+
+    <li class="five">
+        <h5>Ganhe!!</h5>
+        Ganhe no melhor bolão interativo.    
+    </li>
+</ol>
+

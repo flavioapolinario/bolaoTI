@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Aposta_GolsTimeAway_ColumnName" xml:space="preserve">
+    <value>GOLS_TIME_AWAY</value>
+  </data>
+  <data name="Aposta_GolsTimeHome_ColumnName" xml:space="preserve">
+    <value>GOLS_TIME_HOME</value>
+  </data>
+  <data name="Aposta_Id_ColumnName" xml:space="preserve">
+    <value>APOSTA_ID</value>
+  </data>
+  <data name="Aposta_PartidaId_ColumnName" xml:space="preserve">
+    <value>PARTIDA_ID</value>
+  </data>
+  <data name="Aposta_PontosAposta_ColumnName" xml:space="preserve">
+    <value>PONTOS_APOSTA</value>
+  </data>
+  <data name="Aposta_Table" xml:space="preserve">
+    <value>APOSTA</value>
+  </data>
+  <data name="Aposta_UsuarioId_ColumnName" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+  <data name="Campeoanto_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="CampeonatoOrganizacao_CampeonatoId_FK_Column" xml:space="preserve">
+    <value>CAMPEONATO_ID</value>
+  </data>
+  <data name="CampeonatoOrganizacao_OrganizacaoId_FK_Column" xml:space="preserve">
+    <value>ORGANIZACAO_ID</value>
+  </data>
+  <data name="CampeonatoOrganizacao_Table" xml:space="preserve">
+    <value>CAMPEONATO_ORGANIZACAO</value>
+  </data>
+  <data name="Campeonato_Fim_ColumnName" xml:space="preserve">
+    <value>FIM</value>
+  </data>
+  <data name="Campeonato_Id_ColumnName" xml:space="preserve">
+    <value>CAMPEONATO_ID</value>
+  </data>
+  <data name="Campeonato_Inicio_ColumnName" xml:space="preserve">
+    <value>INICIO</value>
+  </data>
+  <data name="Campeonato_NomeAbreviado_ColumnName" xml:space="preserve">
+    <value>NOME_ABREVIADO</value>
+  </data>
+  <data name="Campeonato_Table" xml:space="preserve">
+    <value>CAMPEONATO</value>
+  </data>
+  <data name="Claim_ClaimId_ColumnName" xml:space="preserve">
+    <value>CLAIM_ID</value>
+  </data>
+  <data name="Claim_ClaimType_ColumnName" xml:space="preserve">
+    <value>CLAIM_TYPE</value>
+  </data>
+  <data name="Claim_ClaimValue_ColumnName" xml:space="preserve">
+    <value>CLAIM_VALUE</value>
+  </data>
+  <data name="Claim_Table" xml:space="preserve">
+    <value>CLAIM</value>
+  </data>
+  <data name="Claim_UsuarioId_ColumnName" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+  <data name="Estadio_Capacidade_ColumnName" xml:space="preserve">
+    <value>CAPACIDADE</value>
+  </data>
+  <data name="Estadio_Cidade_ColumnName" xml:space="preserve">
+    <value>CIDADE</value>
+  </data>
+  <data name="Estadio_Id_ColumnName" xml:space="preserve">
+    <value>ESTADIO_ID</value>
+  </data>
+  <data name="Estadio_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Estadio_Table" xml:space="preserve">
+    <value>ESTADIO</value>
+  </data>
+  <data name="Estadio_UF_ColumnName" xml:space="preserve">
+    <value>UF</value>
+  </data>
+  <data name="ExternalLogin" xml:space="preserve">
+    <value>EXTERNAL_LOGIN</value>
+  </data>
+  <data name="ExternalLogin_LoginProvider_ColumnName" xml:space="preserve">
+    <value>LOGIN_PROVIDER</value>
+  </data>
+  <data name="ExternalLogin_ProviderKey_ColumnName" xml:space="preserve">
+    <value>PROVIDER_KEY</value>
+  </data>
+  <data name="ExternalLogin_UserId_ColumnName" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+  <data name="Fase_CampeonatoId_ColumnName" xml:space="preserve">
+    <value>CAMPEONATO_ID</value>
+  </data>
+  <data name="Fase_DataFim_ColumnName" xml:space="preserve">
+    <value>DATA_FIM</value>
+  </data>
+  <data name="Fase_DataInicio_ColumnName" xml:space="preserve">
+    <value>DATA_INICIO</value>
+  </data>
+  <data name="Fase_Id_ColumnName" xml:space="preserve">
+    <value>FASE_ID</value>
+  </data>
+  <data name="Fase_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Fase_Table" xml:space="preserve">
+    <value>FASE</value>
+  </data>
+  <data name="Grupo_FaseId_ColumnName" xml:space="preserve">
+    <value>FASE_ID</value>
+  </data>
+  <data name="Grupo_Id_ColumnName" xml:space="preserve">
+    <value>GRUPO_ID</value>
+  </data>
+  <data name="Grupo_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Grupo_Table" xml:space="preserve">
+    <value>GRUPO</value>
+  </data>
+  <data name="Organizacao_Id_ColumnName" xml:space="preserve">
+    <value>ORGANIZACAO_ID</value>
+  </data>
+  <data name="Organizacao_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Organizacao_Table" xml:space="preserve">
+    <value>ORGANIZACAO</value>
+  </data>
+  <data name="Partida_DataPartida_ColumnName" xml:space="preserve">
+    <value>DATA_PARTIDA</value>
+  </data>
+  <data name="Partida_EstadioId_ColumnName" xml:space="preserve">
+    <value>ESTADIO_ID</value>
+  </data>
+  <data name="Partida_GolsTimeAway_ColumnName" xml:space="preserve">
+    <value>GOLS_TIME_AWAY</value>
+  </data>
+  <data name="Partida_GolsTimeHome_ColumnName" xml:space="preserve">
+    <value>GOLS_TIME_HOME</value>
+  </data>
+  <data name="Partida_Id_ColumnName" xml:space="preserve">
+    <value>PARTIDA_ID</value>
+  </data>
+  <data name="Partida_RodadaId_ColumnName" xml:space="preserve">
+    <value>RODADA_ID</value>
+  </data>
+  <data name="Partida_Table" xml:space="preserve">
+    <value>PARTIDA</value>
+  </data>
+  <data name="Partida_TimeAwayId_ColumnName" xml:space="preserve">
+    <value>TIME_AWAY_ID</value>
+  </data>
+  <data name="Partida_TimeHomeId_ColumnName" xml:space="preserve">
+    <value>TIME_HOME_ID</value>
+  </data>
+  <data name="Perfil_Id_Field" xml:space="preserve">
+    <value>PERFIL_ID</value>
+  </data>
+  <data name="Perfil_Nome_Field" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Perfil_Table" xml:space="preserve">
+    <value>PERFIL</value>
+  </data>
+  <data name="Ranking_CampeonatoId_ColumnName" xml:space="preserve">
+    <value>CAMPEONATO_ID</value>
+  </data>
+  <data name="Ranking_CincoTotalPontos_ColumnName" xml:space="preserve">
+    <value>CINCO_TOTAL_PONTOS</value>
+  </data>
+  <data name="Ranking_Colocacao_ColumnName" xml:space="preserve">
+    <value>COLOCACAO</value>
+  </data>
+  <data name="Ranking_DezTotalPontos_ColumnName" xml:space="preserve">
+    <value>DEZ_TOTAL_PONTOS</value>
+  </data>
+  <data name="Ranking_DoisTotalPontos_ColumnName" xml:space="preserve">
+    <value>DOIS_TOTAL_PONTOS</value>
+  </data>
+  <data name="Ranking_Id_ColumnName" xml:space="preserve">
+    <value>RANKING_ID</value>
+  </data>
+  <data name="Ranking_NumeroApostas_ColumnName" xml:space="preserve">
+    <value>NUMERO_APOSTAS</value>
+  </data>
+  <data name="Ranking_NumeroPartidas_ColumnName" xml:space="preserve">
+    <value>NUMERO_PARTIDAS</value>
+  </data>
+  <data name="Ranking_OrganizacaoId_ColumnName" xml:space="preserve">
+    <value>ORGANIZACAO_ID</value>
+  </data>
+  <data name="Ranking_SeteTotalPontos_ColumnName" xml:space="preserve">
+    <value>SETE_TOTAL_PONTOS</value>
+  </data>
+  <data name="Ranking_Table" xml:space="preserve">
+    <value>RANKING</value>
+  </data>
+  <data name="Ranking_TotalPontos_ColumnName" xml:space="preserve">
+    <value>TOTAL_PONTOS</value>
+  </data>
+  <data name="Ranking_UsuarioId_ColumnName" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+  <data name="Rodada_GrupoId_ColumnName" xml:space="preserve">
+    <value>GRUPO_ID</value>
+  </data>
+  <data name="Rodada_Id_ColumnName" xml:space="preserve">
+    <value>RODADA_ID</value>
+  </data>
+  <data name="Rodada_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Rodada_Ordem_ColumnName" xml:space="preserve">
+    <value>ORDEM</value>
+  </data>
+  <data name="Rodada_Table" xml:space="preserve">
+    <value>RODADA</value>
+  </data>
+  <data name="Time_Id_ColumnName" xml:space="preserve">
+    <value>TIME_ID</value>
+  </data>
+  <data name="Time_ImagemBandeira_ColumnName" xml:space="preserve">
+    <value>CAMINHO_IMAGEM_BANDEIRA</value>
+  </data>
+  <data name="Time_NomeAbreviado_ColumnName" xml:space="preserve">
+    <value>NOME_ABREVIADO</value>
+  </data>
+  <data name="Time_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Time_Table" xml:space="preserve">
+    <value>TIME</value>
+  </data>
+  <data name="Tipo_Coluna_Date" xml:space="preserve">
+    <value>date</value>
+  </data>
+  <data name="Tipo_Coluna_DateTime" xml:space="preserve">
+    <value>datetime2</value>
+  </data>
+  <data name="Tipo_Coluna_Int" xml:space="preserve">
+    <value>int</value>
+  </data>
+  <data name="Tipo_Coluna_NVarchar" xml:space="preserve">
+    <value>nvarchar</value>
+  </data>
+  <data name="Tipo_Coluna_UniqueIdentifier" xml:space="preserve">
+    <value>uniqueidentifier</value>
+  </data>
+  <data name="UsuarioOrganizacao_OrganizacaoId_FK_Column" xml:space="preserve">
+    <value>ORGANIZACAO_ID</value>
+  </data>
+  <data name="UsuarioOrganizacao_Table" xml:space="preserve">
+    <value>USUARIO_ORGANIZACAO</value>
+  </data>
+  <data name="UsuarioOrganizacao_UsuarioId_FK_Column" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+  <data name="UsuarioPerfil_PerfilId_FK_Column" xml:space="preserve">
+    <value>PERFIL_ID</value>
+  </data>
+  <data name="UsuarioPerfil_Table" xml:space="preserve">
+    <value>USUARIO_PERFIL</value>
+  </data>
+  <data name="UsuarioPerfil_UsuarioId_FK_Column" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+  <data name="Usuario_Email_ColumnName" xml:space="preserve">
+    <value>EMAIL</value>
+  </data>
+  <data name="Usuario_Nome_ColumnName" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Usuario_PasswordHash_ColumnName" xml:space="preserve">
+    <value>PASSWORD_HASH</value>
+  </data>
+  <data name="Usuario_SecurityStamp_ColumnName" xml:space="preserve">
+    <value>SECURITY_STAMP</value>
+  </data>
+  <data name="Usuario_Table" xml:space="preserve">
+    <value>USUARIO</value>
+  </data>
+  <data name="Usuario_Telefone_ColumnName" xml:space="preserve">
+    <value>TELEFONE</value>
+  </data>
+  <data name="Usuario_UsuarioId_ColumnName" xml:space="preserve">
+    <value>USUARIO_ID</value>
+  </data>
+</root>

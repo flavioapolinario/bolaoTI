@@ -1,0 +1,9 @@
+﻿@if (ViewData["Mensagem"] != null)
+{ 
+    <br />
+    <div class="alert @ViewData["Tipo"].ToString()">
+        <h4>
+            @ViewData["Mensagem"].ToString()
+        </h4>
+    </div>    
+}

@@ -1,0 +1,40 @@
+﻿@model BolaoTI.web.Models.Partida
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Partida</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataPartida)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataPartida)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GolsTimeHome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GolsTimeHome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GolsTimeAway)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GolsTimeAway)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Voltar", "Index")
+    </p>
+}

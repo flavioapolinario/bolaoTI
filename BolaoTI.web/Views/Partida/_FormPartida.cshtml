@@ -1,0 +1,68 @@
+﻿@model BolaoTI.web.Models.Partida
+
+
+<fieldset>
+    <legend>Partida</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.DataPartida)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.DataPartida, "{0:dd-MM-yyyy HH:mm}", new {@class = "datepicker" })
+        @Html.ValidationMessageFor(model => model.DataPartida)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.TimeHome)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("TimeHomeID", null, new { @class = "dropDownList" })
+        @Html.ValidationMessageFor(model => model.TimeHome.Id)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.GolsTimeHome)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.GolsTimeHome, new { maxlength = 2, @class = "inputTextBox", Style = "width:5%;" })
+        @Html.ValidationMessageFor(model => model.GolsTimeHome)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.TimeAway)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("TimeAwayID", null, new { @class = "dropDownList" })
+        @Html.ValidationMessageFor(model => model.TimeAway.Id)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.GolsTimeAway)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.GolsTimeAway, new { maxlength = 2, @class = "inputTextBox", Style = "width:5%;" })
+        @Html.ValidationMessageFor(model => model.GolsTimeAway)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.EstadioJogo)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("EStadioID", null, new { @class = "dropDownList" })
+        @Html.ValidationMessageFor(model => model.EstadioJogo.Id)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.TimeAway)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("RodadaID", null, new { @class = "dropDownList" })
+        @Html.ValidationMessageFor(model => model.Rodada.Id)
+    </div>
+
+    <p>
+        <input type="submit" value="Salvar" />
+    </p>
+</fieldset>
+
+

@@ -1,0 +1,28 @@
+﻿@model IList<BolaoTI.web.ViewModels.ApostaPartidaData>
+
+@{
+    ViewBag.Title = "Apostas";
+}
+
+<h2>Apostas do Participante: @Html.Display("NomeUsuario") </h2>
+
+@using (Html.BeginForm("ExibirAposta", "Aposta", FormMethod.Get))
+{        
+    @Html.AntiForgeryToken()
+    @Html.Hidden("IdUsuario")
+    @Html.Hidden("NomeUsuario")
+    @:Selecione a fase da Copa: @Html.DropDownList("SelectedFase")
+    <input type="submit" value="Filtrar" />    
+}
+
+@using (Html.BeginForm("generatePDF", "Aposta", FormMethod.Post)) 
+{
+    @Html.Hidden("IdUsuario")
+    @Html.Hidden("NomeUsuario")
+    <input type="submit" value="Exportar" />
+}
+
+@foreach (var aposta in Model)
+{
+    @Html.Partial("_TabelPartida", aposta)
+}

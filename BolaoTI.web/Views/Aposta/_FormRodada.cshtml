@@ -1,0 +1,14 @@
+﻿@model BolaoTI.web.Models.Rodada
+
+@{
+    ViewBag.Title = Model.Nome;    
+}
+
+<h5>@Model.Nome</h5>
+
+<table>
+    @foreach (var partida in Model.Partidas)
+    {
+        @Html.Partial("_FormPartida", partida)     
+    }
+</table>

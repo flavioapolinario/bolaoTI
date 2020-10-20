@@ -1,0 +1,79 @@
+﻿@model IEnumerable<BolaoTI.web.ViewModels.RankingData>
+
+@{
+    ViewBag.Title = "Ranking";
+    int posicao = 0;
+}
+
+<h2>Ranking Geral do Bolão</h2>
+
+<table style="width: 100%">
+    <tr style="background-color: lightgrey">
+        <th style="width: 5%">Pos.
+        </th>
+        <th style="width: 35%">
+            @Html.DisplayNameFor(model => model.ExhibitionName)
+        </th>
+        <th style="width: 20%">
+            @Html.DisplayNameFor(model => model.TotalPontos)
+        </th>
+        <th style="width: 10%">
+            @Html.DisplayNameFor(model => model.DezTotalPontos)
+        </th>
+        <th style="width: 10%">
+            @Html.DisplayNameFor(model => model.SeteTotalPontos)
+        </th>
+        <th style="width: 10%">
+            @Html.DisplayNameFor(model => model.CincoTotalPontos)
+        </th>
+        <th style="width: 10%">
+            @Html.DisplayNameFor(model => model.DoisTotalPontos)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        posicao++;                   
+        <tr>
+            <td>
+                @posicao.ToString()
+            </td>
+            <td>
+                @if (ViewBag.VerApostas)
+                {
+                    @Html.ActionLink(
+                                    linkText: ((String.IsNullOrEmpty(item.ExhibitionName) ? item.Usuario : item.ExhibitionName)),
+                                    actionName: "ExibirAposta",
+                                    controllerName: "Aposta",
+                                    routeValues: new
+                                    {
+                                        IdUsuario = item.IdUsuario,
+                                        NomeUsuario = item.NomeUsuario
+                                    },
+                                    htmlAttributes: null
+                                )        
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.NomeUsuario)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPontos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DezTotalPontos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeteTotalPontos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CincoTotalPontos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoisTotalPontos)
+            </td>
+        </tr>
+    }
+
+</table>

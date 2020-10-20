@@ -1,0 +1,162 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.web", "BolaoTI.web\BolaoTI.web.csproj", "{C96C321A-8370-468E-91A9-36E27FC95AFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{FC7228E8-FA93-472C-85B2-28EA3F0731CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{AAF4FC8E-4EA3-4E0A-8E1D-9F51B8C53826}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{A5949580-6F2F-477B-AF0E-9173B93EFFFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UML", "UML", "{8EED02B6-1854-48B9-9E6F-BACA532DE5C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{1793A96A-3BA6-4186-807F-04ADC4B97D99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestrutura", "Infraestrutura", "{26B05432-AB0B-40D2-9AB4-22720B22D5BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Aplicacao", "BolaoTI.Aplicacao\BolaoTI.Aplicacao.csproj", "{9111A92C-41FC-4B07-9751-58D03F3C5C74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Aplicacao.Teste", "BolaoTI.Aplicacao.Teste\BolaoTI.Aplicacao.Teste.csproj", "{AB1478FD-CBFE-4BE2-B065-3AEE2471DB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Dominio", "BolaoTI.Dominio\BolaoTI.Dominio.csproj", "{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Dominio.Teste", "BolaoTI.Dominio.Teste\BolaoTI.Dominio.Teste.csproj", "{09A01B63-8940-425B-8AA9-007FB0BDEBB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Infra", "BolaoTI.Infra\BolaoTI.Infra.csproj", "{BDECA911-F850-40D1-9BBA-E354C1B425E7}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "BolaoTI.UML", "BolaoTI.UML\BolaoTI.UML.modelproj", "{791A3087-D7F7-4049-86B6-7CC9E1111E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Utils", "BolaoTI.Utils\BolaoTI.Utils.csproj", "{3F8B262A-582C-4DB1-8985-C0C140D435E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Utils.Teste", "BolaoTI.Utils.Teste\BolaoTI.Utils.Teste.csproj", "{3393939A-16F0-4FB5-97F3-719C0D62F86B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.Resources", "BolaoTI.Resources\BolaoTI.Resources.csproj", "{41E780E6-083B-4BF6-8869-4CE207F98EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BolaoTI.UI", "BolaoTI.UI\BolaoTI.UI.csproj", "{0BA5DB46-1BFB-4E15-BD55-2B991A7B1DFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{98E9F7FA-FE5B-4C00-9A43-DE8D9A089E31}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://flavioapolinario.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BolaoTI.web\\BolaoTI.web.csproj
+		SccProjectTopLevelParentUniqueName1 = BolaoTI.web.sln
+		SccProjectName1 = BolaoTI.web
+		SccLocalPath1 = BolaoTI.web
+		SccProjectUniqueName2 = BolaoTI.Aplicacao\\BolaoTI.Aplicacao.csproj
+		SccProjectTopLevelParentUniqueName2 = BolaoTI.web.sln
+		SccProjectName2 = BolaoTI.Aplicacao
+		SccLocalPath2 = BolaoTI.Aplicacao
+		SccProjectUniqueName3 = BolaoTI.Aplicacao.Teste\\BolaoTI.Aplicacao.Teste.csproj
+		SccProjectTopLevelParentUniqueName3 = BolaoTI.web.sln
+		SccProjectName3 = BolaoTI.Aplicacao.Teste
+		SccLocalPath3 = BolaoTI.Aplicacao.Teste
+		SccProjectUniqueName4 = BolaoTI.Dominio\\BolaoTI.Dominio.csproj
+		SccProjectTopLevelParentUniqueName4 = BolaoTI.web.sln
+		SccProjectName4 = BolaoTI.Dominio
+		SccLocalPath4 = BolaoTI.Dominio
+		SccProjectUniqueName5 = BolaoTI.Dominio.Teste\\BolaoTI.Dominio.Teste.csproj
+		SccProjectTopLevelParentUniqueName5 = BolaoTI.web.sln
+		SccProjectName5 = BolaoTI.Dominio.Teste
+		SccLocalPath5 = BolaoTI.Dominio.Teste
+		SccProjectUniqueName6 = BolaoTI.UML\\BolaoTI.UML.modelproj
+		SccProjectTopLevelParentUniqueName6 = BolaoTI.web.sln
+		SccProjectName6 = BolaoTI.UML
+		SccLocalPath6 = BolaoTI.UML
+		SccProjectUniqueName7 = BolaoTI.Utils\\BolaoTI.Utils.csproj
+		SccProjectTopLevelParentUniqueName7 = BolaoTI.web.sln
+		SccProjectName7 = BolaoTI.Utils
+		SccLocalPath7 = BolaoTI.Utils
+		SccProjectUniqueName8 = BolaoTI.Utils.Teste\\BolaoTI.Utils.Teste.csproj
+		SccProjectTopLevelParentUniqueName8 = BolaoTI.web.sln
+		SccProjectName8 = BolaoTI.Utils.Teste
+		SccLocalPath8 = BolaoTI.Utils.Teste
+		SccProjectUniqueName9 = BolaoTI.Resources\\BolaoTI.Resources.csproj
+		SccProjectTopLevelParentUniqueName9 = BolaoTI.web.sln
+		SccProjectName9 = BolaoTI.Resources
+		SccLocalPath9 = BolaoTI.Resources
+		SccProjectUniqueName10 = BolaoTI.Infra\\BolaoTI.Infra.csproj
+		SccProjectTopLevelParentUniqueName10 = BolaoTI.web.sln
+		SccProjectName10 = BolaoTI.Infra
+		SccLocalPath10 = BolaoTI.Infra
+		SccProjectUniqueName11 = BolaoTI.UI\\BolaoTI.UI.csproj
+		SccProjectTopLevelParentUniqueName11 = BolaoTI.web.sln
+		SccProjectName11 = BolaoTI.UI
+		SccLocalPath11 = BolaoTI.UI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C96C321A-8370-468E-91A9-36E27FC95AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96C321A-8370-468E-91A9-36E27FC95AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96C321A-8370-468E-91A9-36E27FC95AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96C321A-8370-468E-91A9-36E27FC95AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9111A92C-41FC-4B07-9751-58D03F3C5C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9111A92C-41FC-4B07-9751-58D03F3C5C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9111A92C-41FC-4B07-9751-58D03F3C5C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9111A92C-41FC-4B07-9751-58D03F3C5C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1478FD-CBFE-4BE2-B065-3AEE2471DB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1478FD-CBFE-4BE2-B065-3AEE2471DB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1478FD-CBFE-4BE2-B065-3AEE2471DB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1478FD-CBFE-4BE2-B065-3AEE2471DB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A01B63-8940-425B-8AA9-007FB0BDEBB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A01B63-8940-425B-8AA9-007FB0BDEBB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A01B63-8940-425B-8AA9-007FB0BDEBB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A01B63-8940-425B-8AA9-007FB0BDEBB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDECA911-F850-40D1-9BBA-E354C1B425E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDECA911-F850-40D1-9BBA-E354C1B425E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDECA911-F850-40D1-9BBA-E354C1B425E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDECA911-F850-40D1-9BBA-E354C1B425E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{791A3087-D7F7-4049-86B6-7CC9E1111E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{791A3087-D7F7-4049-86B6-7CC9E1111E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{791A3087-D7F7-4049-86B6-7CC9E1111E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{791A3087-D7F7-4049-86B6-7CC9E1111E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8B262A-582C-4DB1-8985-C0C140D435E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8B262A-582C-4DB1-8985-C0C140D435E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8B262A-582C-4DB1-8985-C0C140D435E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8B262A-582C-4DB1-8985-C0C140D435E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3393939A-16F0-4FB5-97F3-719C0D62F86B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3393939A-16F0-4FB5-97F3-719C0D62F86B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3393939A-16F0-4FB5-97F3-719C0D62F86B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3393939A-16F0-4FB5-97F3-719C0D62F86B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E780E6-083B-4BF6-8869-4CE207F98EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E780E6-083B-4BF6-8869-4CE207F98EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E780E6-083B-4BF6-8869-4CE207F98EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E780E6-083B-4BF6-8869-4CE207F98EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA5DB46-1BFB-4E15-BD55-2B991A7B1DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA5DB46-1BFB-4E15-BD55-2B991A7B1DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA5DB46-1BFB-4E15-BD55-2B991A7B1DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA5DB46-1BFB-4E15-BD55-2B991A7B1DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C96C321A-8370-468E-91A9-36E27FC95AFF} = {A5949580-6F2F-477B-AF0E-9173B93EFFFA}
+		{0BA5DB46-1BFB-4E15-BD55-2B991A7B1DFE} = {A5949580-6F2F-477B-AF0E-9173B93EFFFA}
+		{9111A92C-41FC-4B07-9751-58D03F3C5C74} = {FC7228E8-FA93-472C-85B2-28EA3F0731CA}
+		{AB1478FD-CBFE-4BE2-B065-3AEE2471DB9C} = {FC7228E8-FA93-472C-85B2-28EA3F0731CA}
+		{D9C3DD29-B929-4848-92C2-CC5B22ED6ACA} = {AAF4FC8E-4EA3-4E0A-8E1D-9F51B8C53826}
+		{09A01B63-8940-425B-8AA9-007FB0BDEBB9} = {AAF4FC8E-4EA3-4E0A-8E1D-9F51B8C53826}
+		{791A3087-D7F7-4049-86B6-7CC9E1111E2E} = {8EED02B6-1854-48B9-9E6F-BACA532DE5C4}
+		{3F8B262A-582C-4DB1-8985-C0C140D435E7} = {1793A96A-3BA6-4186-807F-04ADC4B97D99}
+		{3393939A-16F0-4FB5-97F3-719C0D62F86B} = {1793A96A-3BA6-4186-807F-04ADC4B97D99}
+		{41E780E6-083B-4BF6-8869-4CE207F98EE5} = {1793A96A-3BA6-4186-807F-04ADC4B97D99}
+		{BDECA911-F850-40D1-9BBA-E354C1B425E7} = {26B05432-AB0B-40D2-9AB4-22720B22D5BE}
+	EndGlobalSection
+EndGlobal

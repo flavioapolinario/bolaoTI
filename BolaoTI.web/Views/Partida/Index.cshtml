@@ -1,0 +1,84 @@
+﻿@model IEnumerable<BolaoTI.web.Models.Partida>
+
+@{
+    ViewBag.Title = "Partidas";
+}
+
+<h2>Partidas</h2>
+
+<p>
+    @Html.ActionLink("Registrar Nova Partida", "Create")
+</p>
+
+@using (Html.BeginForm())
+{        
+    @Html.AntiForgeryToken()
+    @:Selecione a fase da Copa: @Html.DropDownList("SelectedFase")
+    <input type="submit" value="Filtrar" />
+}
+<table>
+    <tr>
+        <th style="width: 15%">
+            @Html.DisplayNameFor(model => model.DataPartida)
+        </th>
+        <th style="width: 15%">
+            @Html.DisplayNameFor(model => model.TimeHome)
+        </th>
+        <th style="width: 15%">
+            @Html.DisplayNameFor(model => model.TimeAway)
+        </th>
+        <th style="width: 10%">
+            @Html.DisplayNameFor(model => model.GrupoRodada)
+        </th>
+        <th style="width: 10%">
+            @Html.DisplayNameFor(model => model.EstadioJogo)
+        </th>
+        <th style="width: 25%"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPartida)
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            <b>@Html.DisplayFor(modelItem => item.TimeHome.NomeAbreviado)</b>
+                        </td>
+                        <td style="width:10%">
+                            <img src="@item.TimeHome.ImagemBandeira.Remove(0, 1)" /></td>
+                        <td style="width:10%">
+                            @Html.TextBoxFor(modelItem => item.GolsTimeHome, new { maxlength = 2, @readonly = true, @class = "inputTextBox" })</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td style="width:10%">
+                            @Html.TextBoxFor(modelItem => item.GolsTimeAway, new { maxlength = 2, @readonly = true, @class = "inputTextBox" })
+                        </td>
+                        <td style="width:10%">
+                            <img src="@item.TimeAway.ImagemBandeira.Remove(0, 1)" /></td>
+                        <td style="width:10%"><b>@Html.DisplayFor(modelItem => item.TimeAway.NomeAbreviado)</b></td>
+                    </tr>
+                </table>
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.GrupoRodada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadioJogo.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

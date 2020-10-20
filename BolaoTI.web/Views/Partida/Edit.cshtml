@@ -1,0 +1,19 @@
+﻿@model BolaoTI.web.Models.Partida
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Partial("_FormPartida", Model)    
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>

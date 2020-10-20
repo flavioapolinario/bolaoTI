@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BolaoTI.web.Models.UserProfile>
+
+@{
+    ViewBag.Title = "ExibirParticipantes";
+}
+
+<h2 style="color:blue;">@ViewBag.message</h2><br />
+
+<h2>Participantes</h2>
+
+<p>
+    @Html.ActionLink("Registrar novo usuario", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+</p>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserId })
+            </td>
+            <td>
+                @using (Html.BeginForm("ResetPassword", "Account", new {
+                                                                        IdUsuario = item.UserId                                                                  
+                                                                       }, FormMethod.Post))
+                {
+                    <input type="submit" value="Reiniciar Senha" />
+                }
+            </td>
+        </tr>
+    }
+
+</table>

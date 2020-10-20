@@ -1,0 +1,82 @@
+﻿@model BolaoTI.web.Models.Partida
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Partial("_FormPartida", Model)
+@*<fieldset>
+        <legend>Partida</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataPartida)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataPartida)
+            @Html.ValidationMessageFor(model => model.DataPartida)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeHome)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TimeHomeID", String.Empty)
+            @Html.ValidationMessageFor(model => model.TimeHome.Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GolsTimeHome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GolsTimeHome)
+            @Html.ValidationMessageFor(model => model.GolsTimeHome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeAway)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TimeAwayID", String.Empty)
+            @Html.ValidationMessageFor(model => model.TimeAway.Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GolsTimeAway)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GolsTimeAway)
+            @Html.ValidationMessageFor(model => model.GolsTimeAway)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EstadioJogo)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EStadioID", String.Empty)
+            @Html.ValidationMessageFor(model => model.EstadioJogo.Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeAway)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RodadaID", String.Empty)
+            @Html.ValidationMessageFor(model => model.Rodada.Id)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>*@
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>

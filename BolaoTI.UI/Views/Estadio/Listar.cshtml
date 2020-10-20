@@ -1,0 +1,33 @@
+﻿@using BolaoTI.Dominio
+@{
+    var Estadios = (List<Estadio>)ViewBag.Estadios;
+}
+
+<p>@TempData["mensagem"]</p>
+
+<h2>Estadios @Html.ActionLink(BolaoTI.Resources.View.Link.Action_Novo_Link, "adicionar", "Estadio", null, new { @class = "btn btn-primary pull-right" })</h2>
+
+<div class="row">
+    <div class="col-lg-12" id="lista-Estadios">
+        @Html.Partial("_ListaDeEstadios", Estadios)
+    </div>
+</div>
+
+<p><a class="btn btn-default" onclick="window.location='@Request.UrlReferrer.AbsoluteUri'" href="#">@BolaoTI.Resources.View.Link.Action_Voltar_Link</a></p>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('#lista-Estadios').on('click', '.remover', function (evt) {
+                evt.preventDefault();
+                var title = '@BolaoTI.Resources.View.Messages.Confirm_Deseja_Exlcluir';
+                if (confirm(title)) {
+                    $.post($(this).attr('href'), function (html) {
+                        $('#lista-Estadios').html(html);
+                    });
+                }
+            });
+        });
+    </script>
+}

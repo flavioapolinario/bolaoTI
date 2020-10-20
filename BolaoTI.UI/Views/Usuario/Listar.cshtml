@@ -1,0 +1,57 @@
+﻿@using BolaoTI.Dominio
+@{
+    var Usuarios = (List<Usuario>)ViewBag.Usuarios;
+}
+
+<p>@TempData["mensagem"]</p>
+
+<h2>Usuarios @Html.ActionLink(BolaoTI.Resources.View.Link.Action_Novo_Link, "adicionar", "Usuario", null, new { @class = "btn btn-primary pull-right" })</h2>
+
+<div class="row">
+    <div class="col-lg-12" id="lista-Usuarios">
+        @Html.Partial("_ListaDeUsuarios", Usuarios)
+    </div>
+</div>
+
+<p><a class="btn btn-default" onclick="window.location='@Request.UrlReferrer.AbsoluteUri'" href="#">@BolaoTI.Resources.View.Link.Action_Voltar_Link</a></p>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $('#lista-Usuarios').on('click', '.remover', function (evt) {
+                evt.preventDefault();
+                var title = '@BolaoTI.Resources.View.Messages.Confirm_Deseja_Exlcluir';
+                if (confirm(title)) {
+                    $.post($(this).attr('href'), function (html) {
+                        $('#lista-Usuarios').html(html);
+                    });
+                }
+            });
+        });
+
+        $(function () {
+            $('#lista-Usuarios').on('click', '.reset', function (evt) {
+                evt.preventDefault();
+                var title = '@BolaoTI.Resources.View.Messages.Confirm_Deseja_ReiniciarSenha';
+                if (confirm(title)) {
+                    $.post($(this).attr('href'), function (html) {
+                        $('#lista-Usuarios').html(html);
+                    });
+                }
+            });
+        });
+
+        $(function () {
+            $('#lista-Usuarios').on('click', '.addParticipante', function (evt) {
+                evt.preventDefault();
+                var title = '@BolaoTI.Resources.View.Messages.Confirm_Deseja_AddParticipante';
+                if (confirm(title)) {
+                    $.post($(this).attr('href'), function (html) {
+                        $('#lista-Usuarios').html(html);
+                    });
+                }
+            });
+         });
+    </script>
+}

@@ -1,0 +1,124 @@
+﻿@using BolaoTI.Dominio;
+@model BolaoTI.Dominio.Fase
+
+@Html.HiddenFor(x => x.Nome)
+@Html.HiddenFor(x => x.DataInicio)
+@Html.HiddenFor(x => x.DataFim)
+@Html.HiddenFor(x => x.Id)
+@Html.HiddenFor(x => x.Campeonato.Id)
+@Html.HiddenFor(x => x.CampeonatoId)
+@Html.HiddenFor(x => x.Campeonato.Nome)
+
+@{
+    var obrigatorio = bool.Parse(ViewData["Obrigatorio"].ToString());
+    object classTimeHome = null;
+    object classTimeAway = null;
+
+    if (obrigatorio)
+    {
+        classTimeHome = new { @class = "form-control-custom team_home", @required = "required", @type = "number", @style = "width:18%" };
+        classTimeAway = new { @class = "form-control-custom team_alway", @required = "required", @type = "number", @style = "width:18%" };
+    }
+    else
+    {
+        classTimeHome = new { @class = "form-control-custom team_home", @type = "number", @style = "width:18%" };
+        classTimeAway = new { @class = "form-control-custom team_alway", @type = "number", @style = "width:18%" };
+    }
+}
+
+@for (int iGrupo = 0; iGrupo < Model.Grupos.Count; iGrupo++)
+{
+    <div class="col-md-5">
+        <h3>@Model.Grupos[iGrupo].Nome</h3>
+
+        @Html.HiddenFor(x => x.Grupos[iGrupo].Id)
+        @Html.HiddenFor(x => x.Grupos[iGrupo].Nome)
+        @Html.HiddenFor(x => x.Grupos[iGrupo].FaseId)
+
+        @for (int iRodada = 0; iRodada < Model.Grupos[iGrupo].Rodadas.Count; iRodada++)
+        {
+            <h4>@Model.Grupos[iGrupo].Rodadas[iRodada].Nome</h4>
+
+            for (int iPartida = 0; iPartida < Model.Grupos[iGrupo].Rodadas[iRodada].Partidas.Count; iPartida++)
+            {
+
+                <div class="form-inline form-group" style="background-color: aliceblue; text-align: center">
+                    <p>
+                        <label for="focusedInput" style="width: 8%">@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHome.NomeAbreviado</label>
+                        <img src="@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHome.ImagemBandeira.Trim().Remove(0, 1)" width="40" height="40" />
+
+
+                        @if (ViewData["Funcao"].ToString().Equals(BolaoTI.Resources.View.Link.Action_Apostar_link))
+                        {
+                            if (bool.Parse(ViewData["RealizouAposta"].ToString()) ||
+                                Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].DataPartida < BolaoTI.Utils.FieldUtil.DataAtualFusoHorario())
+                            {
+                                <label for="focusedInput" style="width: 18%; font-size:x-large; ">@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].GolsTimeHome</label>
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].GolsTimeHome, classTimeHome)
+                            }
+                        }
+                        else if (ViewData["Funcao"].ToString().Equals(BolaoTI.Resources.View.Link.Action_FecharPartida_link))
+                        {
+                            @Html.TextBoxFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].GolsTimeHome, classTimeHome)
+                        }
+
+                        <label for="focusedInput">X</label>
+
+                        @if (ViewData["Funcao"].ToString().Equals(BolaoTI.Resources.View.Link.Action_Apostar_link))
+                        {
+                            if (bool.Parse(ViewData["RealizouAposta"].ToString()) ||
+                                Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].DataPartida < BolaoTI.Utils.FieldUtil.DataAtualFusoHorario())
+                            {
+                                <label for="focusedInput" style="width: 18%; font-size:x-large; ">@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].GolsTimeAway</label>
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].GolsTimeAway, classTimeAway)
+                            }
+                        }
+                        else if (ViewData["Funcao"].ToString().Equals(BolaoTI.Resources.View.Link.Action_FecharPartida_link))
+                        {
+                            @Html.TextBoxFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].GolsTimeAway, classTimeAway)
+                        }
+
+                        <img src="@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAway.ImagemBandeira.Trim().Remove(0, 1)" width="40" height="40" />
+                        <label for="focusedInput" style="width: 10%;">@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAway.NomeAbreviado</label>
+                    </p>
+                    <p>
+                        <label for="focusedInput">@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].Estadio.Nome</label>
+                        <label for="focusedInput">@Model.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].DataPartida.ToString(BolaoTI.Resources.RegularExpression.FormatString_DateTime)</label>
+                    </p>
+                </div>
+
+
+
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].Id)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHome.Id)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHome.NomeAbreviado)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHome.ImagemBandeira)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHome.Nome)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAway.Id)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAway.NomeAbreviado)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAway.ImagemBandeira)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAway.Nome)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].Estadio.Id)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].Estadio.Nome)
+
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].DataPartida)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].EstadioId)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].RodadaId)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeHomeId)
+                @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Partidas[iPartida].TimeAwayId)
+            }
+
+            @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Id)
+            @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Nome);
+            @Html.HiddenFor(x => x.Grupos[iGrupo].Rodadas[iRodada].Ordem);
+        }
+    </div>
+
+}
+

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9111A92C-41FC-4B07-9751-58D03F3C5C74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BolaoTI.Aplicacao</RootNamespace>
+    <AssemblyName>BolaoTI.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementacao\Servicos\ApostaServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\CampeonatoServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\EstadioServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\FaseServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\GrupoServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\OrganizacaoServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\PartidaServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\PerfilServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\RankingServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\RegraServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\RodadaServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\TimeServicoAplicacao.cs" />
+    <Compile Include="Implementacao\Servicos\UsuarioServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Infraestrutura\IFabricaDeUnidadeDeTrabalho.cs" />
+    <Compile Include="Interfaces\Infraestrutura\IUnidadeDeTrabalho.cs" />
+    <Compile Include="Interfaces\Servicos\IApostaServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\ICampeonatoServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IEstadioServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IFaseServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IGrupoServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IOrganizacaoServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IPartidaServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IPerfilServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IRankingServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IRegraServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IRodadaServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\ITimeServicoAplicacao.cs" />
+    <Compile Include="Interfaces\Servicos\IUsuarioServicoAplicacao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BolaoTI.Dominio\BolaoTI.Dominio.csproj">
+      <Project>{d9c3dd29-b929-4848-92c2-cc5b22ed6aca}</Project>
+      <Name>BolaoTI.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolaoTI.Resources\BolaoTI.Resources.csproj">
+      <Project>{41e780e6-083b-4bf6-8869-4ce207f98ee5}</Project>
+      <Name>BolaoTI.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolaoTI.Utils\BolaoTI.Utils.csproj">
+      <Project>{3f8b262a-582c-4db1-8985-c0c140d435e7}</Project>
+      <Name>BolaoTI.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = BolaoTI.Resources.View.Menu.Home_Admin_menu;
+}
+
+<h2>@ViewBag.Title</h2>
+
+</br>
+<p>
+    <fieldset>
+        <legend>
+            <h4>@BolaoTI.Resources.View.Label.Label_Gerenciar_Usuarios</h4>
+        </legend>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Usuario_menu, "Listar", "Usuario", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_FecharPartida_menu, "Index", "Fase", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Campeonato_menu, "Participe", "Home", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+    </fieldset>
+</p>
+<p>
+    <fieldset>
+        <legend>
+            <h4>@BolaoTI.Resources.View.Label.Label_Configuracoes</h4>
+        </legend>
+
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Campeonato_menu, "Participe", "Home", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Fase_menu, "Listar", "Fase", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Grupo_menu, "Participe", "Home", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Organizacao_menu, "Participe", "Home", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Time_menu, "Listar", "Time", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Estadio_menu, "Listar", "Estadio", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>        
+        <div class="col-md-3">
+            <p>
+                @Html.ActionLink(BolaoTI.Resources.View.Menu.Admin_Perfil_menu, "Participe", "Home", null, new { @class = "btn btn-default btn-lg btn-block" })
+            </p>
+        </div>
+
+    </fieldset>
+</p>

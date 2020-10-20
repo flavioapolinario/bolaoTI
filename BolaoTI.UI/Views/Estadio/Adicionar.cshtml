@@ -1,0 +1,41 @@
+﻿@model BolaoTI.UI.ViewsModel.EstadioViewModel
+
+<h2>@BolaoTI.Resources.View.Link.Action_Novo_Link @BolaoTI.Resources.Classes.Estadio_Class</h2>
+
+@using (Html.BeginForm("adicionar", "Estadio", FormMethod.Post, new { id = "formCadastrar" }))
+{
+    @Html.AntiForgeryToken()        
+    @Html.ValidationSummary(null, new { @class = "alert alert-danger" })
+    <hr />
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nome)
+        @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Cidade)
+        @Html.TextBoxFor(model => model.Cidade, new { @class = "form-control" })
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Uf)
+        @Html.TextBoxFor(model => model.Uf, new { @class = "form-control" })
+    </div>
+        
+    <div class="form-group">
+        @Html.LabelFor(model => model.Capacidade)
+        @Html.TextBoxFor(model => model.Capacidade, new { @class = "form-control", @type = "number" })
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary">@BolaoTI.Resources.View.Link.Action_Salvar_link </button>
+    @Html.ActionLink(BolaoTI.Resources.View.Link.Action_Voltar_Link, "Listar", "Estadio", null, new { @class = "btn btn-lg btn-default" })
+}
+
+
+
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/jquery-1.10.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+}

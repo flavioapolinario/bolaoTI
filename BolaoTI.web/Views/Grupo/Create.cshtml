@@ -1,0 +1,23 @@
+﻿@model BolaoTI.web.Models.Grupo
+
+@{
+    ViewBag.Title = "Grupo";
+}
+
+<h2>Grupo</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Partial("_FormGrupo", Model)
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

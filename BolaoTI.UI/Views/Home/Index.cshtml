@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = BolaoTI.Resources.View.Label.Label_Titulo_BolaoTI;
+}
+
+<div class="jumbotron">
+    <h2>Olá</h2>
+    <p class="lead">
+        Seja bem-vindo ao bolão interativo. A maneira mais fácil e democrática de dar seus palpites nos jogos de futebol.<br />       
+    </p>
+    <p>        
+        @Html.ActionLink(BolaoTI.Resources.View.Label.Label_Cadastrar, "Register", "Account", null, new { @class = "btn btn-primary btn-lg" }) 
+        @Html.ActionLink(BolaoTI.Resources.View.Menu.Home_Regras_menu, "Regras", "Home", null, new { @class = "btn btn-default btn-lg" }) 
+    </p>    
+</div>

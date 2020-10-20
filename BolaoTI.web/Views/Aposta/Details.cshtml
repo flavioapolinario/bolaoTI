@@ -1,0 +1,36 @@
+﻿@model BolaoTI.web.Models.Aposta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Aposta</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GolsTimeHome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GolsTimeHome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GolsTimeAway)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GolsTimeAway)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PontosAposta)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PontosAposta)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

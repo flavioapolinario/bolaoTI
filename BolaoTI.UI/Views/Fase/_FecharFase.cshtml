@@ -1,0 +1,10 @@
+﻿@model BolaoTI.Dominio.Fase
+
+@using (Html.BeginForm("Fechar", "Fase", FormMethod.Post, new { id = "formApostar" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.Partial("_Partida", Model, new ViewDataDictionary { { "Funcao", BolaoTI.Resources.View.Link.Action_FecharPartida_link }, { "Obrigatorio", false } })
+
+    <button type="submit" class="btn btn-lg btn-primary">@BolaoTI.Resources.View.Link.Action_FecharPartida_link </button>
+}

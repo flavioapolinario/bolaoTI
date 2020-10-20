@@ -1,0 +1,26 @@
+﻿@model BolaoTI.web.Models.Rodada
+
+
+<fieldset>
+    <legend>Rodada</legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Nome)
+        @Html.ValidationMessageFor(model => model.RodadaGrupo.Id)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.RodadaGrupo)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("GrupoID", null, new { @class = "dropDownList" })
+        @Html.ValidationMessageFor(model => model.RodadaGrupo.Id)
+    </div>
+
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+</fieldset>
